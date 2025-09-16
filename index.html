@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="wrapper">
+        <header class="header">
+            <h1>Age Calculator</h1>
+            <p class="sub"><strong>Enter your date of birth</strong>.</p>
+        </header>
+
+        <form id="age-form" novalidate>
+            <fieldset class="dob-fieldset">
+                <legend>Date of Birth</legend>
+
+                <div class="row">
+                    <label for="day">Day:</label>
+                    <input type="number" name="day" id="day" min="1" max="31"  inputmode="numeric"
+                        aria-describedby="day-error" required>
+                    <span class="error" id="day-error" aria-live="polite"></span>
+                </div>
+
+                <div class="row">
+                    <label for="month">Month:</label>
+                    <select name="month" id="month" aria-describedby="month-error" required>
+                        <option value=""></option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <span class="error" id="month-error" aria-live="polite"></span>
+                </div>
+
+                <div class="row">
+                    <label for="year">Year:</label>
+                    <input type="number" name="year" id="year" min="1900" inputmode="numeric"
+                        aria-describedby="year-error" required>
+                    <span class="error" id="year-error" aria-live="polite"></span>
+                </div>
+            </fieldset>
+
+
+            <div class="action">
+                <button type="submit" id="calculate-btn">Calculate Age</button>
+                <button type="reset" id="reset-btn">Reset</button>
+            </div>
+
+            <section id="result" class="result" aria-live="polite">
+                <h2>Calculated Age</h2>
+                <div class="result-grid">
+                    <div class="result-card">
+                        <p class="value" id="years"></p>
+                        <p class="label">Years</p>
+                    </div>
+                    <div class="result-card">
+                        <p class="value" id="months"></p>
+                        <p class="label">Months</p>
+                    </div>
+                    <div class="result-card">
+                        <p class="value" id="days"></p>
+                        <p class="label">Days</p>
+                    </div>
+                </div> 
+            </section>
+        </form>
+
+        <footer class="footer">
+            <p>Made by &copy Muhamad Yasir @CodeAlpha</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
